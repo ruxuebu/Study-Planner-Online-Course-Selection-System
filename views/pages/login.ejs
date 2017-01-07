@@ -1,0 +1,40 @@
+<% include ../partials/layout %>
+<link type="text/css" rel="stylesheet" href="/public/css/login.css">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">Study Planner</a>
+      </div>
+    </div>
+  </nav>
+
+    <div class="container">
+      <img id="logo" class="center-block" src="/public/images/stevens_logo.png" />
+      <h3 class="title" style="text-align:center;">
+      Sign in to continue to <b>Study Planner</b>
+      </h3>
+        <div class="card card-container">
+            <img id="profile-img" class="profile-img-card" src="/public/images/profilepic.png" />
+            <p id="profile-name" class="profile-name-card"></p>
+			 <!-- show any messages that come back with authentication -->
+    		<% if (message.length > 0) { %>
+        	<div class="alert alert-danger"><%= message %></div>
+    		<% } %>
+
+            <form action = "/login" method = "post" class="form-signin">
+                <span id="reauth-email" class="reauth-email"></span>
+                <input name = "email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                <input name ="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <div id="remember" class="checkbox">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Remember me
+                    </label>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+            </form><!-- /form -->
+
+            <a href="/signup" class="create-account">
+                Create an account
+            </a>
+        </div><!-- /card-container -->
+    </div><!-- /container -->

@@ -1,0 +1,87 @@
+{"course":[
+	{
+		"courseName": "Web Programming",
+		"courseNumber": "CS546",
+		"courseMajor": "Computer Science",
+		"isCore": true,
+		"credit":3.0
+	},
+	{
+		"courseName": "core courese 2",
+		"courseNumber": "CS500",
+		"courseMajor": "Computer Science",
+		"isCore": true,
+		"credit":3.0
+	},
+	{
+		"courseName": "additional course1",
+		"courseNumber": "CS500",
+		"courseMajor": "Computer Science",
+		"isCore": false,
+		"credit":3.0
+	},
+	{
+		"courseName": "additional course2",
+		"courseNumber": "CS500",
+		"courseMajor": "Computer Science",
+		"isCore": false,
+		"credit":3.0
+	},
+	{
+		"courseName": "additional course3",
+		"courseNumber": "CS500",
+		"courseMajor": "Computer Science",
+		"isCore": false,
+		"credit":3.0
+	},
+	{
+		"courseName": "additional course4",
+		"courseNumber": "CS500",
+		"courseMajor": "Computer Science",
+		"isCore": false,
+		"credit":3.0
+	},
+	{
+		"courseName": "additional course5",
+		"courseNumber": "CS500",
+		"courseMajor": "Computer Science",
+		"isCore": false,
+		"credit":3.0
+	},
+	{
+		"courseName": "additional course6",
+		"courseNumber": "CS500",
+		"courseMajor": "Computer Science",
+		"isCore": false,
+		"credit":3.0
+	},
+	{
+		"courseName": "additional course7",
+		"courseNumber": "CS500",
+		"courseMajor": "Computer Science",
+		"isCore": false,
+		"credit":3.0
+	},
+	{
+		"courseName": "additional course8",
+		"courseNumber": "CS500",
+		"courseMajor": "Computer Science",
+		"isCore": false,
+		"credit":3.0
+	},
+	{
+		"courseName": "additional course9",
+		"courseNumber": "CS500",
+		"courseMajor": "Computer Science",
+		"isCore": false,
+		"credit":3.0
+	},
+	{
+		"courseName": "additional course10",
+		"courseNumber": "CS500",
+		"courseMajor": "Computer Science",
+		"isCore": false,
+		"credit":3.0
+	}
+
+]}

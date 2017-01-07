@@ -1,0 +1,261 @@
+<% include ../partials/layout %>
+<% include ../partials/navbar %>
+<div class = container>
+<!-- ******************************************header*********************************** -->
+    <h3>Verify your information</h3>
+    <br>
+    <table class="table table-striped">
+      <tbody>
+        <tr>
+          <td><b>Last Name:  </b> <%= user.form.lastname %> </td>
+          <td><b>First Name: </b> <%= user.form.firstname %> </td>
+        </tr>
+        <tr>
+          <td><b>Student ID: </b> <%= user.form.schoolid %>  </td>
+          <td><b>Major: </b> <%= user.form.major %> </td>
+        </tr>
+        <tr>
+          <td><b>Concentration: </b><%= user.form.concentration %> </td>
+          <td><b>Name of Degree: </b><%= user.form.degree %> </td>
+        </tr>
+        <tr>
+          <td><b>Graduation Year: </b>20<%= user.form.gradyear %>  </td>
+          <td><b>Graduation Term: </b> <%= user.form.gradterm %>  </td>
+        </tr>
+        <tr>
+          <td><b>Applying for O.T.P: </b><%= user.form.OPT %> </td>
+        </tr>
+      </tbody>
+    </table>
+    <a href="/form1" class="btn btn-primary" role="button">Edit</a>
+    <hr>
+    <h3 class = "text-center"> Schedule Your Courses</h3>
+  <div class = "col-md-6">
+    <div class = "card">
+      <div class="row">
+        <div class ="col-md-12">
+          <label for="coreCourse"> Core Course </label>
+          <select class = "form-control" id ="coreCourse">
+          <% for (var i = 0; i < courses.length; i++) {%>
+            <% if (courses[i].isCore == true) { %>
+            <option value= "<%=courses[i].courseNumber+';'+courses[i].courseName%>" > 
+            <%= courses[i].courseNumber+' '+ courses[i].courseName %> 
+            </option>
+            <% } %>
+          <% }%>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label> Year </label>
+            <select class = "form-control" id = "coreCourseYear">
+              <option value="2015"> 2015 </option> 
+              <option value="2016"> 2016 </option>
+              <option value="2017"> 2017 </option>
+              <option value="2018"> 2018 </option>
+              <option value="2019"> 2019 </option>
+            </select>                    
+        </div>
+        <div class="col-md-6">
+        <label> term </label>
+          <select class = "form-control" id = "coreCourseTerm">
+            <option value = "Spring">  Spring </option>
+            <option value = "Summer I">  Summer I </option>
+            <option value = "Summer II">  Summer II </option>
+            <option value = "Fall">  Fall </option>
+          </select>                    
+        </div>                 
+      </div>
+      <div class ="registraionFormAlert", id ="warnning1" style="color:red">
+      </div>
+      <br>
+      <button class="btn btn-primary" id = "addCoreCourse"> Add Course </button>
+      <hr>
+      <div class="row">
+        <div class ="col-md-12">
+          <label for="coreCourse"> Additional Course </label>
+          <select class = "form-control" id ="otherCourse">
+          <% for (var i = 0; i < courses.length; i++) {%>
+            <option value= "<%=courses[i].courseNumber+';'+courses[i].courseName%>" > 
+            <%= courses[i].courseNumber+' '+ courses[i].courseName %> 
+            </option>
+          <% }%>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label> Year </label>
+            <select class = "form-control" id = "otherCourseYear">
+              <option value="2015"> 2015 </option> 
+              <option value="2016"> 2016 </option>
+              <option value="2017"> 2017 </option>
+              <option value="2018"> 2018 </option>
+              <option value="2019"> 2019 </option>
+            </select>                    
+        </div>
+        <div class="col-md-6">
+        <label> term </label>
+          <select class = "form-control" id = "otherCourseTerm">
+            <option value = "Spring">  Spring </option>
+            <option value = "Summer I">  Summer I </option>
+            <option value = "Summer II">  Summer II </option>
+            <option value = "Fall">  Fall </option>
+          </select>                    
+        </div>                 
+      </div>
+      <div class = "row">
+      </div>
+      <div class ="registraionFormAlert", id ="warnning2" style="color:red">
+      </div>
+      <br>
+
+      <button class="btn btn-primary" id = "addOtherCourse"> Add Course </button>
+    </div>
+  </div>
+  <div class = "col-md-6">
+    <div class = "card">
+      <h3 class = "text-center">Course List</h3>
+      <hr>
+      <div id = "savedMessage">
+      </div>
+      <ul id = "list" class="list-group">
+      <% for(var i =0; i < courseList.length; i++){ %>
+        <li class = "list-group-item"><%= courseList[i].term+ " "+courseList[i].year+", "+courseList[i].number+" "+courseList[i].name %> <span class='close' id='remove-item'>&times</span></li>
+      <% } %>
+      </ul>
+        <button class ="btn btn-primary" id = "saveList"> Save </button>
+        <button class = "btn btn-primary pull-right" id = "submit"> Submit </button>
+
+    </div>
+  </div>
+
+</div>
+
+<script>
+
+var selected = <%- JSON.stringify(courseList) %>;
+
+function remove(x){
+      $(x).parent().remove();
+      selected.splice(x,1);
+}
+
+function addCore() {
+  var nameList = [];
+
+  for(var i=0; i<selected.length;i++){
+      nameList.push(selected[i].name);
+  }
+  var course = $("#coreCourse").val(),
+      courseYear = $("#coreCourseYear").val(),
+      courseTerm = $("#coreCourseTerm").val();
+      var temp = course.split(";");
+      var courseName = temp[1],
+          courseNumber = temp[0];
+      if(nameList.indexOf(courseName)==-1 && selected.length<10){
+        var display = courseNumber+" "+courseName+" "+courseTerm+" "+courseYear;
+        var newSelection =  {number: String, name: String, year: String, term: String};
+        newSelection.number = courseNumber;
+        newSelection.name = courseName;
+        newSelection.year = courseYear;
+        newSelection.term = courseTerm;
+        $("#list").append("<li class = 'list-group-item'>"+display+"<span class='close' id='remove-item'>&times</span></li>");
+        selected.push(newSelection);
+        $("#warnning1").html("");
+      }
+      else{
+        if(selected.length<10){
+          $("#warnning1").html("This course has already been selected");
+        }
+        else{
+          $('#warnning1').html("You have already selected 10 courses");
+        }
+      }
+
+}
+
+function addOther() {
+  var nameList = [];
+
+  for(var i=0; i<selected.length;i++){
+      nameList.push(selected[i].name);
+  }
+
+  var course = $("#otherCourse").val(),
+      courseYear = $("#otherCourseYear").val(),
+      courseTerm = $("#otherCourseTerm").val();
+      var temp = course.split(";");
+      var courseName = temp[1],
+          courseNumber = temp[0];
+      if(nameList.indexOf(courseName)==-1 && selected.length <10){
+        var display = courseNumber+" "+courseName+" "+courseTerm+" "+courseYear;
+        var newSelection =  {number: String, name: String, year: String, term: String};
+        newSelection.number = courseNumber;
+        newSelection.name = courseName;
+        newSelection.year = courseYear;
+        newSelection.term = courseTerm;
+        $("#list").append("<li class = 'list-group-item'>"+display+"<span class='close' id='remove-item'>&times</span></li>");
+        selected.push(newSelection);
+        $("#warnning2").html("");
+      }
+      else{
+        if(selected.length<10){
+          $("#warnning2").html("This course has already been selected");
+        }
+        else{
+          $('#warnning2').html("You have already selected 10 courses");
+        }
+      }
+}
+
+function saveList(){
+  var requestConfig = {
+    method: "POST",
+    url: "/form2",
+    contentType: "application/json",
+    data: JSON.stringify({
+        selectedCourse: selected,
+    })
+  };
+  var newContent = $("#savedMessage");
+  $.ajax(requestConfig).then(function (responseMessage) {
+    newContent.html(responseMessage.message);
+  });
+}
+
+function submit(){
+  if(selected.length >=10){
+    var requestConfig = {
+      method: "POST",
+      url: "/form2",
+      contentType: "application/json",
+      data: JSON.stringify({
+          selectedCourse: selected,
+      })
+    };
+    $.ajax(requestConfig).then(function (responseMessage) {
+      window.location.href = "form3";
+    });
+  }
+  else{
+    var newContent = $("#savedMessage");
+    newContent.html('<div class="alert alert-warning alert-dismissible fade in" role="alert" id = "savedMessage">'+
+          '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>'
+          +"you need to selected 10 courses."+ 
+          '</div>');
+  }
+}
+
+$(document).ready(function(){
+  $("#addCoreCourse").on('click', addCore);
+  $("#addOtherCourse").on('click', addOther);
+  $("#saveList").on('click', saveList);
+  $('#list').on('click', '#remove-item', function(){
+    remove(this);
+  });
+  $("#submit").on('click', submit);
+});
+
+</script>

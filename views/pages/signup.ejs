@@ -1,0 +1,69 @@
+<% include ../partials/layout %>
+<link type="text/css" rel="stylesheet" href="/public/css/signup.css">
+  
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a class="navbar-brand" href="#">Study Planner</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/login">SIGN IN</a></li>
+        <li><a href="/">HOME</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+      <img id="stevens-logo" class="center-block" src="/public/images/stevens_logo.png" />
+        <div class="card card-container">
+      <h4 class="title" style="text-align:center;">
+            <b>CREATE YOUR ACCOUNT</b>
+        </h4>
+       <!-- show any messages that come back with authentication -->
+        <% if (message.length > 0) { %>
+          <div class="alert alert-danger"><%= message %></div>
+        <% } %>
+
+            <form action = "/signup" method = "post" class="form-signup">
+                <span id="reauth-email" class="reauth-email"></span>
+                <input name = "email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                <input name ="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <input name ="password2" type="password" id="inputPassword2" class="form-control" placeholder="Confirm password" required onChange = "checkPasswordMatch()">
+                <div class ="registraionFormAlert", id ="warnning">
+                </div>
+                <input name ="firstname" type="text" id="inputFirstname" class="form-control" placeholder="Firstname">
+                <input name ="lastname" type="text" id="inputLastname" class="form-control" placeholder="Lastname">
+                <input name ="schoolid" type="text" id="inputSchoolid" class="form-control" placeholder="ID">
+                <input name ="phone" type="text" id="inputPhone" class="form-control" placeholder="Phone Number">
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign Up</button>
+            </form><!-- /form -->
+
+        <p>Already have an account? <a href="/login">Login</a></p>
+    </div><!-- /card-container -->
+</div><!-- /container -->
+
+    
+<script>
+function checkPasswordMatch() {
+    var password = $("#inputPassword").val();
+    var confirmPassword = $("#inputPassword2").val();
+    if (password != confirmPassword)
+        $("#warnning").html("These passwords don't match");
+    else
+        $("#warnning").html("");
+}
+
+$(document).ready(function () {
+   $("#inputPassword2").onChange(checkPasswordMatch);
+});
+
+</script>
+

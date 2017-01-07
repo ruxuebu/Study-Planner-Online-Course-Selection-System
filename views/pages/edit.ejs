@@ -1,0 +1,37 @@
+<% include ../partials/layout %>
+<% include ../partials/navbar %>
+<div class = "container">
+
+	<form action="/edit" method="post" class="form-edit" style="padding: 20px 80px">
+		<div class="form-group">
+	  		<label for="lastname">Last Name: </label>
+	  		<input type="text" class="form-control" placeholder="enter your lastname" name="lastname" value ="<%= user.local.lastname %>" required>
+		</div>
+
+		<div class="form-group">
+	  		<label for="firstname">First Name: </label>
+	  		<input type="text" class="form-control" placeholder="enter your firstname" name="firstname" value ="<%= user.local.firstname %>" required>
+		</div>
+
+		<div class="form-group">
+	  		<label for="shoolid">ID: </label>
+	  		<input type="text" class="form-control" placeholder="enter Your school id" name="schoolid" value ="<%= user.local.schoolid %>" required>
+		</div>
+
+		<div class="form-group">
+	  		<label for="phone">Phone: </label>
+	  		<input type="text" class="form-control" placeholder="enter your phone" name="phone" value ="<%= user.local.phone %>" required>
+		</div>
+		<div class ="row">
+			<div class = "col-md-6">
+				<button class="btn btn-primary" type="submit"><b>Update</b></button>
+			</div>
+			<div class = "col-md-6">
+				<a href = "/passwords" class = "btn btn-primary" role = "button">
+				Change Password
+				</a>
+			</div>
+		</div>
+	</form>
+	
+</div>

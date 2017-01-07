@@ -1,0 +1,14 @@
+<% include ../partials/layout %>
+<% include ../partials/navbar %>
+<link type="text/css" rel="stylesheet" href="/public/css/form3.css">
+<div class="container text-center" >
+  <h3>Your form has been completed, thank you for using <b>Study Planner</b></h3>
+  <hr>
+  <div class ="card">
+  	<div class='embed-responsive' style='padding-bottom:130%'>
+	   <object data='/public/userdoc/<%= user.form.firstname %>_study_plan.pdf' type='application/pdf' width='100%' height='100%'></object>
+	</div>
+	<br>
+	  <a href="/form2" class="btn btn-primary" role="button">Edit Form</a> 
+  </div>
+</div>

@@ -1,0 +1,73 @@
+h2{
+  text-shadow: 4px 4px 4px #aaa;
+}
+
+
+.navbar {
+    opacity: 0.8;
+}
+
+
+.navbar-nav li.active a {
+    color: #fff !important;
+    background-color:#808080 !important;
+}
+
+
+.container {
+    padding: 60px 80px;
+
+}
+
+.person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    max-width: 120px;
+    max-height: 120px;
+    opacity: 0.7;
+}
+.person:hover {
+    border-color: #f1f1f1;
+}
+
+.full-screen {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.carousel-inner img {
+    -webkit-filter: grayscale(20%);
+    filter: grayscale(20%); /* make all photos black and white */ 
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+}
+
+.carousel-caption {
+    color: #fff !important;
+}
+
+@media (max-width: 600px) {
+    .carousel-caption {
+        display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+}
+
+
+.bg-1 {
+    background: #2d2d30;
+    color: #bdbdbd;
+}
+.bg-1 h3 {color: #fff;}
+.bg-1 p {font-style: italic;}
+
+
+footer {
+    padding: 32px;
+}
+
+textarea {
+      resize: none;
+}
+

@@ -1,0 +1,290 @@
+{"course":[
+	{
+		"courseName": "Web Programming",
+		"courseNumber": "CS546",
+		"courseMajor": "Computer Science",
+		"isCore": true,
+		"credit":3.0
+	},
+	{
+		"courseName": "Principles of Programming Languages",
+		"courseNumber": "CS510",
+		"courseMajor": "Computer Science",
+		"isCore": true,
+		"credit":3.0
+	},
+	{
+		"courseName": "Concurrent Programming",
+		"courseNumber": "CS511",
+		"courseMajor": "Computer Science",
+		"isCore": true,
+		"credit":3.0
+	},
+	{
+		"courseName": "Data Mining and Knowledge Management",
+		"courseNumber": "CS513",
+		"courseMajor": "Computer Science",
+		"isCore": true,
+		"credit":3.0
+	},
+	{
+		"courseName": "Introduction to Operating Systems",
+		"courseNumber": "CS520",
+		"courseMajor": "Computer Science",
+		"isCore": true,
+		"credit":3.0
+	},
+	{
+		"courseName": " TCP/IP Networking",
+		"courseNumber": "CS521",
+		"courseMajor": "Computer Science",
+		"isCore": true,
+		"credit":3.0
+	},
+	{
+		"courseName": "Mobile Systems and Applications",
+		"courseNumber": "CS522",
+		"courseMajor": "Computer Science",
+		"isCore": true,
+		"credit":3.0
+	},
+	{
+		"courseName": "Introduction to Cloud Computing",
+		"courseNumber": "CS524",
+		"courseMajor": "Computer Science",
+		"isCore": true,
+		"credit":3.0
+	},
+	{
+		"courseName": "Enterprise and Cloud Computing",
+		"courseNumber": "CS526",
+		"courseMajor": "Computer Science",
+		"isCore": true,
+		"credit":3.0
+	},
+	{
+		"courseName": " Interactive Computer Graphics9",
+		"courseNumber": "CS537",
+		"courseMajor": "Computer Science",
+		"isCore": true,
+		"credit":3.0
+	},
+	{
+		"courseName": "Artificial Intelligence",
+		"courseNumber": "CS541",
+		"courseMajor": "Computer Science",
+		"isCore": true,
+		"credit":3.0
+	},
+	{
+		"courseName": "Human Computer Interaction",
+		"courseNumber": "CS545",
+		"courseMajor": "Computer Science",
+		"isCore": true,
+		"credit":3.0
+	},
+	{
+		"courseName": " Enterprise Software Architecture and Design",
+		"courseNumber": "CS548",
+		"courseMajor": "Computer Science",
+		"isCore": true,
+		"credit":3.0
+	},
+		{
+		"courseName": " Distributed and Cloud Computing",
+		"courseNumber": "CS549",
+		"courseMajor": "Computer Science",
+		"isCore": true,
+		"credit":3.0
+	},
+		{
+		"courseName": "Database Management Systems I",
+		"courseNumber": "CS561",
+		"courseMajor": "Computer Science",
+		"isCore": true,
+		"credit":3.0
+	},
+		{
+		"courseName": "Fundamentals of Cybersecurity",
+		"courseNumber": "CS573",
+		"courseMajor": "Computer Science",
+		"isCore": true,
+		"credit":3.0
+	},
+		{
+		"courseName": "Privacy in a Networked World",
+		"courseNumber": "CS578",
+		"courseMajor": "Computer Science",
+		"isCore": true,
+		"credit":3.0
+	},
+		{
+		"courseName": "Advanced Algorithm Design and Implementation",
+		"courseNumber": "CS600",
+		"courseMajor": "Computer Science",
+		"isCore": true,
+		"credit":3.0
+	},
+		{
+		"courseName": "Parallel Programming for Many-core Processors",
+		"courseNumber": "CS677",
+		"courseMajor": "Computer Science",
+		"isCore": true,
+		"credit":3.0
+	},
+		{
+		"courseName": "Advanced Computational Modeling in Biology and Biomaterials",
+		"courseNumber": "CS694",
+		"courseMajor": "Computer Science",
+		"isCore": true,
+		"credit":3.0
+	},
+		{
+		"courseName": "Discrete Math for Cryptography - Hybrid Section.",
+		"courseNumber": "CS503",
+		"courseMajor": "Computer Science",
+		"isCore": false,
+		"credit":3.0
+	},
+	{
+		"courseName": "Prob & Stochastic Proc I",
+		"courseNumber": "CS505",
+		"courseMajor": "Computer Science",
+		"isCore": false,
+		"credit":3.0
+	},
+	{
+		"courseName": "Introduction to E-Commerce",
+		"courseNumber": "CS519",
+		"courseMajor": "Computer Science",
+		"isCore": false,
+		"credit":3.0
+	},
+	{
+		"courseName": "Mobile Systems and Applications",
+		"courseNumber": "CS522",
+		"courseMajor": "Computer Science",
+		"isCore": false,
+		"credit":3.0
+	},
+	{
+		"courseName": "Health Informatics",
+		"courseNumber": "CS544",
+		"courseMajor": "Computer Science",
+		"isCore": false,
+		"credit":3.0
+	},
+	{
+		"courseName": "Comp Organization & Prog",
+		"courseNumber": "CS550",
+		"courseMajor": "Computer Science",
+		"isCore": false,
+		"credit":3.0
+	},
+	{
+		"courseName": "Web Programming II",
+		"courseNumber": "CS554",
+		"courseMajor": "Computer Science",
+		"isCore": false,
+		"credit":3.0
+	},
+	{
+		"courseName": "Agile Methods for Software Dev.",
+		"courseNumber": "CS555",
+		"courseMajor": "Computer Science",
+		"isCore": false,
+		"credit":3.0
+	},
+	{
+		"courseName": "Computer Vision",
+		"courseNumber": "CS558",
+		"courseMajor": "Computer Science",
+		"isCore": false,
+		"credit":3.0
+	},
+	{
+		"courseName": "Machine Learning: Fund & Apps",
+		"courseNumber": "CS559",
+		"courseMajor": "Computer Science",
+		"isCore": false,
+		"credit":3.0
+	},
+	{
+		"courseName": "Database Management Systems II",
+		"courseNumber": "CS562",
+		"courseMajor": "Computer Science",
+		"isCore": false,
+		"credit":3.0
+	},
+	{
+		"courseName": "Intro Program/Data Struct/Algor",
+		"courseNumber": "CS570",
+		"courseMajor": "Computer Science",
+		"isCore": false,
+		"credit":3.0
+	},
+	{
+		"courseName": "Object-Oriented Anal. & Dsng",
+		"courseNumber": "CS574",
+		"courseMajor": "Computer Science",
+		"isCore": false,
+		"credit":3.0
+	},
+	{
+		"courseName": "Foundations of Cryptography",
+		"courseNumber": "CS579",
+		"courseMajor": "Computer Science",
+		"isCore": false,
+		"credit":3.0
+	},
+	{
+		"courseName": "Data Mining II:Adv Algorithms",
+		"courseNumber": "CS593",
+		"courseMajor": "Computer Science",
+		"isCore": false,
+		"credit":3.0
+	},
+	{
+		"courseName": "Data Mgt&Exploration on the Web",
+		"courseNumber": "CS609",
+		"courseMajor": "Computer Science",
+		"isCore": false,
+		"credit":3.0
+	},
+	{
+		"courseName": "Systems Administration",
+		"courseNumber": "CS615",
+		"courseMajor": "Computer Science",
+		"isCore": false,
+		"credit":3.0
+	},
+	{
+		"courseName": "Adv Topics in Systems Security",
+		"courseNumber": "CS676",
+		"courseMajor": "Computer Science",
+		"isCore": false,
+		"credit":3.0
+	},
+	{
+		"courseName": "Parallel Proc Many Core Proc",
+		"courseNumber": "CS677",
+		"courseMajor": "Computer Science",
+		"isCore": false,
+		"credit":3.0
+	},
+	{
+		"courseName": "Curricular Practical Training",
+		"courseNumber": "CS703",
+		"courseMajor": "Computer Science",
+		"isCore": false,
+		"credit":3.0
+	},
+	{
+		"courseName": "Smartphone and Mobile Security",
+		"courseNumber": "CS810",
+		"courseMajor": "Computer Science",
+		"isCore": false,
+		"credit":3.0
+	}
+]}
+

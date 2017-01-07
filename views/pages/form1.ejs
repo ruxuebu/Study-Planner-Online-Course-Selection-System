@@ -1,0 +1,98 @@
+
+<% include ../partials/layout %>
+<% include ../partials/navbar %>
+	<div class="container">
+  <div class="card">
+  <h3>Your Information</h3>
+  <hr>
+  <form action="/form1" method="post"> 
+  <!--row 1 -->
+    <div class="form-group">
+      <div class="row">
+        <div class ="col-sm-6">
+          <label for=":lastname">Last Name</label>
+          <input type="test" class="form-control" id="lastname" name = "lastname" placeholder="last name" value = <%= user.form.lastname %>>
+        </div>
+        <div class ="col-sm-6">
+          <label for=":firstname">Frist Name</label>
+          <input type="text" class="form-control" id="firstname" name = "firstname" placeholder="frist name" value = <%= user.form.firstname %>>
+        </div>
+      </div>
+      <div class = "row">
+        <div class ="col-sm-6">
+          <label for=":Schoolid">School ID</label>
+          <input type="test" class="form-control" id="schoolid" name = "schoolid" placeholder="your school ID" value = <%= user.form.schoolid %>>
+        </div>
+      <div class ="col-sm-6">
+          <label for=":email">Email</label>
+          <input type="test" class="form-control" id="email" name = "email" placeholder="your email" value = <%= user.local.email %>>
+        </div>
+      </div>
+      <div class="row">
+        <div class ="col-sm-6">
+        <label for=":major">Major</label>
+          <select class="form-control" id="major" name= "major">
+          	<option value= "Computer Science"> Computer Science </option>
+            <option value= "Computer Engineering"> Computer Engineering </option>
+            <option value= "Electrical Engineering"> Electrical Engineering </option>
+          </select>
+        </div>
+        <div class ="col-sm-6">
+        <label for=":concentration">Concentration</label>
+          <select class="form-control" id="concentration" name= "concentration">
+            <option value= "Cloud Computing"> Cloud Computing </option>
+            <option value= "Power Engineering"> Databases </option>
+            <option value= "Gaming and Simulation"> Gaming and Simulation </option>
+            <option value= "Modeling, Simulation, and Visualization"> Modeling, Simulation, and Visualization </option>
+            <option value= "Network and Systems Administration"> Network and Systems Administration </option>
+            <option value= "Secure Systems"> Secure Systems </option>
+            <option value= "Software Development"> Software Development </option>
+            <option value= "Software Engineering"> Software Engineering </option>
+            <option value= "Visual Computing and Information Extraction"> Visual Computing and Information Extraction </option>
+            <option value= "Web Application Development"> Web Application Development </option>
+          </select>
+        </div>
+      </div>
+      <div class = "row">
+      <div class ="col-sm-6">
+          <label for=":gradyear">Graduation Year</label>
+          <div class = "row">
+          <div class = "col-sm-1"> <label for =":gradyear"> 20 </label>
+          </div>
+          <div class = "col-sm-4">
+            <input type="test" class="form-control" id="gradyear" name = "gradyear" placeholder="graduation year" value = <%= user.form.gradyear %>>
+          </div>
+        </div>
+      </div>
+      </div>
+      
+      <div class = "term">
+        <p><b>Graduation Term</b></p>
+        <div class="radio">
+          <label><input type="radio" name="gradterm" id="gradyear1" value="Spring">Spring</label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" name="gradterm" id="gradyear2" value="Summer">Summer</label>
+        </div>
+        <div class="radio"> 
+          <label><input type="radio" name="gradterm" id="gradyear3" value="Fall">Fall</label>
+        </div>  
+      </div>
+
+      <div class = "degree">
+        <p><b>Exact Name of Degree Being Pursued</b></p>
+          <label class = "radio-inline"><input type="radio" name="degree" id="degree1" value="MA">MA</label>
+          <label class = "radio-inline"><input type="radio" name="degree" id="degree2" value="ME">ME</label>
+          <label class = "radio-inline"><input type="radio" name="degree" id="degree3" value="MS">MS</label> 
+      </div>
+
+      <div class = "OPT">
+        <p><b>International Student: Applying for O.P.T?</b></p>
+          <label class = "radio-inline"><input type="radio" name="OPT" id="0" value="yes">Yes</label>
+          <label class = "radio-inline"><input type="radio" name="OPT" id="1" value="no">No</label> 
+      </div>
+      <hr>
+      <button type="submit" class="btn btn-primary">Next</button>
+  </form>
+</div>
+</div>

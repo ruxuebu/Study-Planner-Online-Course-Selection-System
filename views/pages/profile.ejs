@@ -1,0 +1,53 @@
+<% include ../partials/layout %>
+<% include ../partials/navbar %>
+<div class="container">
+	<div class="page-header">
+		<h2> Profile <a href="/logout" class="btn btn-danger">Logout</a></h2>
+	</div>
+	<% if (message.length > 0) { %>
+	  <div class="alert alert-success alert-dismissible fade in" role="alert">
+	  	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+	    	<span aria-hidden="true">&times;</span>
+	  	</button>
+    	<%= message %>
+  	</div>
+   <% } %>
+
+		<div class="container">
+		<br>
+		<br>
+		  <table class="table table-striped">
+		  <tbody>
+		      <tr>
+		        <td><b>		Email:</b></td>
+		        <td><%= user.local.email %></td>
+		      </tr>
+		       <tr>
+		        <td><b>		Lastname:</b></td>
+		        <td><%= user.local.lastname %></td>
+		      </tr>
+		      <tr>
+		        <td><b>		Firstname:</b></td>
+		        <td><%= user.local.firstname %></td>
+		      </tr>
+		       <tr>
+		        <td><b>		ID:</b></td>
+		        <td><%= user.local.schoolid %></td>
+		      </tr>
+		       <tr>
+		        <td><b>		Phone:</b></td>
+		        <td><%= user.local.phone %></td>
+		      </tr>
+		  </tbody>
+		  </table> 
+		  <div class="row">
+		 	<div class = "col-sm-4 col-sm-offset-2">
+				<a href="/edit" class="btn btn-primary" ><strong>Edit Profile</strong></a>
+			</div>
+			<div class = "col-sm-4 sol-sm-offset-8"> 
+				<a href="/account" class="btn btn-primary"><strong>Confirm</strong></a>
+			</div>
+
+		</div>
+	</div>
+</div>
