@@ -1,23 +1,23 @@
-const express = require("express");
-const app = express();
-const bodyParser = require("body-parser");
-const cookieParser = require("cookie-parser");
+var express = require("express");
+var app = express();
+var bodyParser = require("body-parser");
+var cookieParser = require("cookie-parser");
 
-const passport = require("passport");
+var passport = require("passport");
 var session = require("express-session");
 var flash = require('connect-flash');
 
-const configRoutes = require("./routes");
-const configDB = require("./config/mongoConnection");
+var configRoutes = require("./routes");
+var configDB = require("./config/mongoConnection");
 
-const static = express.static(__dirname + '/public');
+var statics = express.static(__dirname + '/public');
 
-const morgan = require('morgan');
-const mongoose = require('mongoose');
+var morgan = require('morgan');
+var mongoose = require('mongoose');
 
-const port = process.env.PORT || 8080;
+var port = process.env.PORT || 8080;
 
-const rewriteUnsupportedBrowserMethods = (req, res, next) => {
+var rewriteUnsupportedBrowserMethods = (req, res, next) => {
     if (req.body && req.body._method) {
         req.method = req.body._method;
         delete req.body._method;
@@ -33,7 +33,7 @@ db.on('error', console.error.bind(console, 'connection error:'));
 
 
 
-app.use("/public", static);
+app.use("/public", statics);
 app.use(morgan("dev"));
 app.use(cookieParser());
 app.use(bodyParser.json());

@@ -1,12 +1,12 @@
 
 //defines the database connection
-const MongoClient = require("mongodb").MongoClient;
+var MongoClient = require("mongodb").MongoClient;
 
-const mongoConfig = {
+var mongoConfig = {
         serverUrl: "mongodb://localhost:27017/",
         database: "studyplanner"
       };
 
-let fullMongoUrl = mongoConfig.serverUrl + mongoConfig.database;
+var fullMongoUrl = mongoConfig.serverUrl + mongoConfig.database;
 
 module.exports = {url:fullMongoUrl};

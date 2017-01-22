@@ -1,5 +1,5 @@
-const userData = require("./users");
-const courseData = require("./course.json");
+var userData = require("./users");
+var courseData = require("./course.json");
 
 module.exports = {
     users: userData,

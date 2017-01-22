@@ -1,7 +1,7 @@
-const authRoutes = require("./auth");
-const profileRoutes = require("./profile");
-const formRoutes =  require("./form");
-const constructorMethod = (app) => {
+var authRoutes = require("./auth");
+var profileRoutes = require("./profile");
+var formRoutes =  require("./form");
+var constructorMethod = (app) => {
 	app.use("/",formRoutes);
 	app.use("/", authRoutes);
 	app.use("/", profileRoutes);

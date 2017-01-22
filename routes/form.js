@@ -1,11 +1,11 @@
-const express = require('express');
-const router = express.Router();
-const data = require("../data");
-const users= data.users;
-const courses = data.courses;
-const xss = require('xss');
+var express = require('express');
+var router = express.Router();
+var data = require("../data");
+var users= data.users;
+var courses = data.courses;
+var xss = require('xss');
 var pdffill = require("../config/pdffill");
-let isLoggedIn = require("../config/loginCheck");
+var isLoggedIn = require("../config/loginCheck");
 
 router.get("/form1", isLoggedIn, function(req, res){
 	res.render("pages/form1.ejs",{
@@ -54,7 +54,8 @@ router.get('/form3', isLoggedIn, function(req, res){
 	    if(err){return done(err);}
 	    if(user){
 	        var form = user.form;
-	        var destination = '/home/pz/finalproject/public/userdoc/' + form.firstname + '_study_plan.pdf';
+	        var destination = '/home/ubuntu/studyplanner/public/userdoc/' + form.firstname + '_study_plan.pdf';
+	        //var destination = '/home/pz/finalproject/public/userdoc/' + form.firstname + '_study_plan.pdf';
 	        pdffill.fill(form,destination);
 	        res.render('pages/form3.ejs', {
 	            user : req.user 

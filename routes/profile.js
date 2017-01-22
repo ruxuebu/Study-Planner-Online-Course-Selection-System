@@ -1,12 +1,12 @@
-const express = require('express');
-const router = express.Router();
-// const passport = require("passport");
-const data = require("../data");
-const users= data.users;
+var express = require('express');
+var router = express.Router();
+// var passport = require("passport");
+var data = require("../data");
+var users= data.users;
 // var configPassport = require("../config/passportStrategy");
 
 // configPassport(passport);
-let isLoggedIn = require("../config/loginCheck");
+var isLoggedIn = require("../config/loginCheck");
 
 router.get("/profile", isLoggedIn, function(req, res){
 	res.render("pages/profile.ejs",{
