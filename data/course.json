@@ -174,6 +174,20 @@
 		"isCore": false,
 		"credit":3.0
 	},
+    {
+		"courseName": "Enterprise Software Architecture and Design",
+		"courseNumber": "CS548",
+		"courseMajor": "Computer Science",
+		"isCore": true,
+		"credit":3.0
+	},
+    {
+		"courseName": "Distributed and Cloud Computing",
+		"courseNumber": "CS549",
+		"courseMajor": "Computer Science",
+		"isCore": true,
+		"credit":3.0
+	},
 	{
 		"courseName": "Comp Organization & Prog",
 		"courseNumber": "CS550",
@@ -209,6 +223,13 @@
 		"isCore": false,
 		"credit":3.0
 	},
+    {
+		"courseName": "Database Management Systems I",
+		"courseNumber": "CS561",
+		"courseMajor": "Computer Science",
+		"isCore": true,
+		"credit":3.0
+	},
 	{
 		"courseName": "Database Management Systems II",
 		"courseNumber": "CS562",
@@ -221,6 +242,20 @@
 		"courseNumber": "CS570",
 		"courseMajor": "Computer Science",
 		"isCore": false,
+		"credit":3.0
+	},
+    {
+		"courseName": "Fundamentals of Cybersecurity",
+		"courseNumber": "CS573",
+		"courseMajor": "Computer Science",
+		"isCore": true,
+		"credit":3.0
+	},
+    {
+		"courseName": "Privacy in a Networked World",
+		"courseNumber": "CS578",
+		"courseMajor": "Computer Science",
+		"isCore": true,
 		"credit":3.0
 	},
 	{
@@ -242,6 +277,13 @@
 		"courseNumber": "CS593",
 		"courseMajor": "Computer Science",
 		"isCore": false,
+		"credit":3.0
+	},
+    {
+		"courseName": "Advanced Algorithm Design and Implementation",
+		"courseNumber": "CS600",
+		"courseMajor": "Computer Science",
+		"isCore": true,
 		"credit":3.0
 	},
 	{
@@ -269,7 +311,14 @@
 		"courseName": "Parallel Proc Many Core Proc",
 		"courseNumber": "CS677",
 		"courseMajor": "Computer Science",
-		"isCore": false,
+		"isCore": true,
+		"credit":3.0
+	},
+    {
+		"courseName": "Advanced Computational Modeling in Biology and Biomaterials",
+		"courseNumber": "CS694",
+		"courseMajor": "Computer Science",
+		"isCore": true,
 		"credit":3.0
 	},
 	{
