@@ -6,6 +6,7 @@ We have deployed this web application on AWS EC2. Please visit it at: studyplann
 
 Or you can follow the instructions to run this web applicaiton:
 The server is designed based on Nodejs, to correctly run this application, you need:
+
 1. cd to the directory 
 
 2. Enter command: "npm install" to make sure you have installed Nodejs(npm), Mongodb, pdftk
