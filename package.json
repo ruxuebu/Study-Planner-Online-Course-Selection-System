@@ -9,7 +9,7 @@
   "scripts": {
 	"start": "node app.js"
   },
-  "author": "Pandong Zhang",
+  "author": "Pandong Zhang, Ruxue Bu",
   "license": "MIT",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
